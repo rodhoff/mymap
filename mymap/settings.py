@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'mymap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': "django.contrib.gis.db.backends.postgis",
+        "HOST": "localhost",
+        "NAME": "postgres",
+        "PASSWORD": "@Brasil01",
+        "PORT": 5432,
+        "USER": "postgres"
     }
 }
 
